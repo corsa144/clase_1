@@ -1,17 +1,29 @@
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Calculadora de Edades</h1>
+  
+    <div>
+      <label for="edadUno">Edad Uno:</label>
+      <input id="edadUno" [(ngModel)]="edadUno" type="number" />
+    </div>
+  
+    <div>
+      <label for="edadDos">Edad Dos:</label>
+      <input id="edadDos" [(ngModel)]="edadDos" type="number" />
+    </div>
 
-    <label for="">Ingrese edad uno: </label>
-    <input type="number"   [(ngModel)] = "edad_uno">
-    <label for="">Ingrese edad dos: </label>
-    <input type="number"   [(ngModel)] = "edad_dos">
-
-    
-    <input type="number" [(ngModel)] = "promedio">
-    
-    <input type="number" [(ngModel)] = "suma">
-    
-    <button (click)="calcular()">Calcular</button>
-    
-    <button (click)="limpiar()" > Limpiar</button>
-
-
+    <div style="margin-top: 20px;">
+      <button (click)="calcular()">Calcular</button>
+      <button (click)="limpiar()">Limpiar</button>
+    </div>
+  
+    <div style="margin-top: 20px;">
+      <label for="suma">Suma:</label>
+      <input id="suma" [value]="suma" readonly />
+  
+      <div>
+        <label for="promedio">Prom:</label>
+        <input id="promedio" [value]="promedio" readonly />
+      </div>
+    </div>
+  </div>
 <router-outlet />
